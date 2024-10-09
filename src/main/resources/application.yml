@@ -1,0 +1,17 @@
+quarkus:
+  datasource:
+    jdbc:
+      url: ${DATABASE_URL:urlDoBanco_schema}
+    db-kind: postgresql
+    username: ${DATABASE_USERNAME:user}
+    password: ${DATABASE_PASSWORD:password}
+  http:
+    port: 8090
+kafka:
+  bootstrap:
+    servers: kafka:9092
+mp:
+  messaging:
+    outgoing:
+      challenge:
+        topic: intention
