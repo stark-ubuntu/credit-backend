@@ -15,4 +15,4 @@ mp:
     outgoing:
       challenge:
         connector: smallrye-kafka
-        topic: intention
+        topic: intention-transfer
