@@ -34,7 +34,11 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-vertx</artifactId>
         </dependency>
-        <dependency>
+	<dependency>
+    	    <groupId>io.quarkus</groupId>
+    	    <artifactId>quarkus-narayana-jta</artifactId>
+	</dependency>
+	<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
