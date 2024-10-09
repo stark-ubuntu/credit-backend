@@ -1,4 +1,7 @@
 quarkus:
+  hibernate-orm:
+    database:
+      generation: none
   datasource:
     jdbc:
       url: ${DATABASE_URL:urlDoBanco_schema}
@@ -9,10 +12,14 @@ quarkus:
     port: 8090
 kafka:
   bootstrap:
-    servers: kafka:9092
+    servers: localhost:9092
 mp:
   messaging:
     outgoing:
       challenge:
         connector: smallrye-kafka
         topic: intention-transfer
+        value:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
+        key:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
