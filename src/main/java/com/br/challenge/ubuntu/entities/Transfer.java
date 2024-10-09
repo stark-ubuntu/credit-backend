@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "transfer", schema = "credit")
+@Table
 public class Transfer extends PanacheEntityBase {
 
     @Id
@@ -25,4 +25,7 @@ public class Transfer extends PanacheEntityBase {
     private Integer amount;
     private String status;
 
+    public static Transfer findByTaxId(String taxId) {
+        return find("taxId", taxId).firstResult();
+    }
 }
