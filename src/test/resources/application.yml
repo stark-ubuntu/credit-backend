@@ -1,0 +1,13 @@
+quarkus:
+  datasource:
+    db-kind: h2
+    username: challenge
+    jdbc:
+      url: jdbc:h2:mem:challenge;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  hibernate-orm:
+    database:
+      generation: drop-and-create
+  jacoco:
+    excludes:
+      - "com/br/challenge/ubuntu/entities/**"
+      - "com/br/challenge/ubuntu/resources/**"
