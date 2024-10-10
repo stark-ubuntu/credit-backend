@@ -12,6 +12,5 @@ public class SaveIntentionTransferServices implements Serializable {
     @Transactional(Transactional.TxType.REQUIRES_NEW)
     public void execute(Transfer transfer) {
         transfer.persistAndFlush();
-        System.out.println("transfer intention registered");
     }
 }
