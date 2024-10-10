@@ -1,4 +1,13 @@
+stark:
+  account:
+    environment: ${ZONE:local}
+    id: ${ID_ACCOUNT:0000000000}
+    key: ${KEY:local}
 quarkus:
+  rest-client:
+    stark-bank-api:
+      url: ${URL_BASE:default}
+      scope: jakarta.inject.Singleton
   hibernate-orm:
     database:
       generation: none
