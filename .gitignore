@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 .env
 .idea/
+privateKey.pem
+publicKey.pem
 # C extensions
 *.so
 
