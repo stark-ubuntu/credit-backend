@@ -1,0 +1,15 @@
+name: APP Workflow CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_version:
+        description: Image Version
+        required: true
+
+jobs:
+  CI:
+    uses: stark-ubuntu/devops-backend/.github/workflows/ci.yml@main
+    with:
+      name: "credit-backend"
+      version: ${{ inputs.image_version }}
