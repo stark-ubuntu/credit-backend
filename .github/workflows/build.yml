@@ -1,4 +1,4 @@
-name: APP Workflow CI
+name: Quakus Workflow CI
 
 on:
   workflow_dispatch:
